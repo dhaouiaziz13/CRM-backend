@@ -75,10 +75,7 @@ app.use((req, res, next) => {
 
 app.use(
   '/api',
-  cors({
-    origin: true,
-    credentials: true,
-  }),
+  cors(),
   erpAuthRouter
 );
 
@@ -86,10 +83,7 @@ app.use(
 
 app.use(
   '/api',
-  cors({
-    origin: true,
-    credentials: true,
-  }),
+  cors(),
   isValidAdminToken,
   erpApiRouter
 );
